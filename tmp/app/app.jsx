@@ -1,20 +1,6 @@
-import ReactDOM from 'react-dom';
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Nav from './components/nav.jsx';
-import Home from './components/home.jsx';
-import Products from './components/products.jsx';
-import NotFound from './components/notfound.jsx';
-import ItemsList from './components/ItemsList.jsx';
-import PcGames from './components/pc.jsx';
-import ConsoleGames from './components/console.jsx';
-import Parts from './components/parts.jsx';
-
-
-// var ReactDOM = require('react-dom');
-// var React = require('react');
-//var ItemsList = require('./components/ItemsList.jsx');
-
+var ReactDOM = require('react-dom');
+var React = require('react');
+var ItemsList = require('./components/ItemsList.jsx');
  
 const propsValues = {
     title: "Цены ==> Игры для ПК | Игры для консолей | Комплектующие",
@@ -302,31 +288,8 @@ const propsValues = {
         ]
     ]        
 };
-
-const phones =[
-  {id: 1, name: "Apple iPhone 12 Pro"}, 
-  {id: 2, name: "Google Pixel 5"}, 
-  {id: 3, name: "Huawei P40 Pro"} 
-];
-
+ 
 ReactDOM.render(
-  <Router>
-      <div>
-         <Nav />
-          <Switch>
-              <Route exact path="/" component={Home} />
-              <Route path="/products" component={Products} />
-              <Route path="/pc-games" component={PcGames} />
-              <Route path="/console-games" component={ConsoleGames} />
-              <Route path="/parts" component={Parts} />
-              <Route component={NotFound} />
-          </Switch>
-      </div>
-  </Router>,
-  document.getElementById("app")
+    <ItemsList data={propsValues} />,
+    document.getElementById("app")
 )
-
-// ReactDOM.render(
-//     <ItemsList data={propsValues} />,
-//     document.getElementById("app")
-// )
