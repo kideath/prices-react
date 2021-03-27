@@ -7,6 +7,8 @@ const phones =[
     {id: 3, name: "AAAHuawei P40 Pro"} 
   ];
 
+  // https://savelagame.ru/sony-playstation-4/igry-playstation-4/
+
 export default class ConsoleGames extends React.Component{
     //render(){
     //    return <h2>Console Games Товары</h2>;
